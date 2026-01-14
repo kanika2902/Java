@@ -1,9 +1,9 @@
 package pac1;
  
 public class Person {
-	String FirstName;
-	String LastName;
-	char Gender;
+	static String FirstName;
+	static String LastName;
+	static char Gender;
 	
 	public Person(String fn,String ln,char g) {
 		this.FirstName = fn;
@@ -31,7 +31,7 @@ public class Person {
 	}
 	
 public static void main(String args[]) {
-	Person p = new Person();
+	Person p = new Person(FirstName, FirstName, Gender);
 	p.setFirstName("Kanika");
 	System.out.println(p.getFirstName());
 }
