@@ -10,7 +10,7 @@ import org.openqa.selenium.support.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
  
-public class TC_Lab11 {
+public class Lab11_PageFactory_2 {
  
     WebDriver driver;
     WebDriverWait wait;
