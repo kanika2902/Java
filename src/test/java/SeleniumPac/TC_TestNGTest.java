@@ -17,6 +17,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
@@ -24,15 +25,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
  
-public class TC_Testng {
-	
+public class TC_TestNGTest {
 	WebDriver driver;
   @Test(dataProvider = "dp")
   public void f(String username, String password) {
-	  
 	  System.out.println("This is test");
-	  Login_POM obj=new Login_POM(driver);
-	  
+	  Login_PageFactory obj=PageFactory.initElements(driver, Login_PageFactory.class);
 	  		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	  	/*
 	  		driver.findElement(By.name("username")).sendKeys(username);
@@ -44,26 +42,22 @@ public class TC_Testng {
 	  		obj.enterpassword(password);
 	  		obj.clickonsubmit();
 	  		boolean dashboard=obj.dashboardisplayed();
-	  		
-	  		
+
 			if(dashboard==true)
 			{
 				System.out.println("login successful");
 				Assert.assertEquals(dashboard, true);
 			}
 			else
-			
 			{
 				System.out.println("login unsuccessful");
 				Assert.assertEquals(dashboard, false);
 			}
-			
-	
+
   }
   @BeforeMethod
   public void beforeMethod() {
 	  System.out.println("This is Before Method");
-		
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -114,4 +108,3 @@ public class TC_Testng {
   }
  
 }
- 
