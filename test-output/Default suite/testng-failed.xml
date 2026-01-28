@@ -3,19 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumPac.TC_TestNG_properties">
+      <class name="SeleniumPac.Lab12">
         <methods>
-          <include name="f"/>
-          <include name="beforeTest"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-          <include name="afterClass"/>
-          <include name="afterTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeClass"/>
-          <include name="afterSuite"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="lab4"/>
         </methods>
-      </class> <!-- SeleniumPac.TC_TestNG_properties -->
+      </class> <!-- SeleniumPac.Lab12 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
